@@ -4,8 +4,8 @@ import React, { useState, useEffect } from "react";
 import NavLogo from "../../public/assets/navLogo.png";
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
 import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
-import { BsFillPersonLinesFill } from "react-icons/bs";
 import { useRouter } from "next/router";
+import { fetchUserData } from "../components/Api";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
@@ -13,6 +13,15 @@ export default function Navbar() {
   const [navBg, setNavBg] = useState("#ecf0f3");
   const [linkColor, setLinkColor] = useState("#1f2937");
   const router = useRouter();
+
+  const [programs, setPrograms] = useState([]);
+
+  useEffect(() => {
+    const loadData = async () => {
+      setPrograms(await fetchUserData());
+    };
+    loadData();
+  }, []);
 
   useEffect(() => {
     if (
@@ -58,7 +67,7 @@ export default function Navbar() {
           <Image
             src={NavLogo}
             alt="/"
-            width="80"
+            width="200"
             // width='125'
             height="50"
           />
@@ -114,7 +123,7 @@ export default function Navbar() {
               <Link href="/">
                 <Image
                   src="/../public/assets/navLogo.png"
-                  width="45"
+                  width="150"
                   height="25"
                   alt="/"
                 />
@@ -127,9 +136,9 @@ export default function Navbar() {
               </div>
             </div>
             <div className="border-b border-gray-300 my-4">
-              <p className="w-[85%] md:w-[90%] py-4 text-center">
-                Vamos construir algo incrível juntos
-              </p>
+            <h2 className="py-4 flex justify-center text-[#7D8635]">
+                {programs.name}
+              </h2>
             </div>
           </div>
           <div className="py-4 flex flex-col">
@@ -205,15 +214,6 @@ export default function Navbar() {
                 hover:scale-105 ease-in duration-300"
                   >
                     <AiOutlineMail />
-                  </div>
-                </Link>
-
-                <Link href="/curriculo">
-                  <div onClick={() => setNav(false)}
-                    className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer 
-                hover:scale-105 ease-in duration-300"
-                  >
-                    <BsFillPersonLinesFill />
                   </div>
                 </Link>
               </div>
