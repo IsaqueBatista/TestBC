@@ -1,16 +1,27 @@
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import React from "react";
-import myImage from "../../public/assets/about.jpg";
-import Skills from "@/components/Skills";
 import Link from "next/link";
 
+import myImage from "../../public/assets/about.jpg";
+import Skills from "@/components/Skills";
+
+import { fetchUserData } from "../components/Api";
+
 export default function About() {
+  const [programs, setPrograms] = useState([]);
+  useEffect(() => {
+    const loadData = async () => {
+      setPrograms(await fetchUserData());
+    };
+    loadData();
+  }, []);
+
   return (
     <>
       <div className="w-full md:h-screen p-2 flex items-center py-16">      
         <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8 px-2 py-16">
           <div className="col-span-2">
-            <h2 className="py-4">Quem sou eu</h2>
+            <h2 className="py-4">Quem somos</h2>
             <p className="py-2 text-gray-600">
               Meu nome é Isaque Batista, músico clarinetista, admirador de
               idiomas, casado e pai da Rebeca de 2 anos.

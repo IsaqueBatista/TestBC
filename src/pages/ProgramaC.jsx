@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+
 import { RiRadioButtonFill } from "react-icons/ri";
 import { BsArrowLeft } from "react-icons/bs";
 
-import ProgramaaA from "../../public/assets/projects/programaA.png";
+import ProgramaaC from "../../public/assets/projects/ProgramaC.png";
 import { fetchUserData } from "../components/Api";
 
-export default function ProgramaA() {
+export default function ProgramaC() {
   const [programs, setPrograms] = useState([]);
   useEffect(() => {
     const loadData = async () => {
@@ -15,7 +16,7 @@ export default function ProgramaA() {
     };
     loadData();
   }, []);
-  
+
   return (
     <div className="w-full">
       <div className="w-screen h-[50vh] relative">
@@ -24,7 +25,7 @@ export default function ProgramaA() {
           className="absolute z-1"
           layout="fill"
           objectFit="cover"
-          src={ProgramaaA}
+          src={ProgramaaC}
           alt="/"
         />
         <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2">
@@ -35,7 +36,7 @@ export default function ProgramaA() {
       <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8">
         <div className="col-span-4">
 
-          <h2 className="pb-5">Sobre o programa</h2>
+        <h2 className="pb-5">Sobre o programa</h2>
           <p>
           {programs.description}
           </p>
