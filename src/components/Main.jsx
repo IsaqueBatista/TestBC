@@ -55,14 +55,6 @@ const Main = () => {
                 <AiOutlineMail />
               </div>
             </Link>
-            <Link href="/curriculo">
-              <div
-                className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer 
-                hover:scale-110 ease-in duration-300"
-              >
-                <BsFillPersonLinesFill />
-              </div>
-            </Link>
           </div>
         </div>
       </div>
