@@ -5,34 +5,34 @@ import travelImg from "../../public/assets/projects/travel.png";
 import amakhaParis from "../../public/assets/projects/amakhaparis.png";
 import ProjectItem from "@/components/ProjectItem";
 
-export default function Projects() {
+export default function AcoesSociais() {
   return (
     <div className="w-full md:h-screen p-2 flex items-center py-16">
       <div className="max-w-[1240px] m-auto px-2 py-16">
-        <h2 className="py-4">Meus Projetos</h2>
+        <h2 className="py-4">Veja outras de nossas ações</h2>
         <div className="grid md:grid-cols-2 gap-8">
           <ProjectItem
-            tittle="Amakha Paris"
+            tittle="Projeto A"
             backgroundImg={amakhaParis}
-            technologies="Next.JS/ Tailwind /JavaScript"
+            technologies="Ação Social - Programa A"
             projectUrl="/amakhaParis"
           />
           <ProjectItem
-            tittle="Login & Cadastro"
+            tittle="Programa B"
             backgroundImg={loginNextImg}
-            technologies="Next.JS / TypeScript"
+            technologies="Ação Social - Programa B"
             projectUrl="/loginNext"
           />
           <ProjectItem
-            tittle="Travel website"
+            tittle="Programa C"
             backgroundImg={travelImg}
-            technologies="React.JS"
+            technologies="Ação Social - Programa C"
             projectUrl="/travel"
           />
           <ProjectItem
-            tittle="Hamburgueria"
+            tittle="Programa D"
             backgroundImg={hamburgueriaImg}
-            technologies="React.JS / NodeJS"
+            technologies="Ação Social - Programa D"
             projectUrl="/hamburgueria"
           />
         </div>

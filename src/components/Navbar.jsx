@@ -80,17 +80,17 @@ export default function Navbar() {
           >
             <Link href="/">
               <li className="ml-4 mr-4 text-sm uppercase hover:border-b">
-                Home
+                Início
+              </li>
+            </Link>
+            <Link href="/AcoesSociais">
+              <li className="ml-4 mr-4 text-sm uppercase hover:border-b">
+                Ações sociais
               </li>
             </Link>
             <Link href="/About">
               <li className="ml-4 mr-4 text-sm uppercase hover:border-b">
                 Sobre
-              </li>
-            </Link>
-            <Link href="/Projects">
-              <li className="ml-4 mr-4 text-sm uppercase hover:border-b">
-                Projetos
               </li>
             </Link>
             <Link href="/Contact">
@@ -145,17 +145,17 @@ export default function Navbar() {
             <ul className="uppercase">
               <Link href="/">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
-                  Home
+                  Início
+                </li>
+              </Link>
+              <Link href="/AcoesSociais">
+                <li onClick={() => setNav(false)} className="py-4 text-sm">
+                  Ações sociais
                 </li>
               </Link>
               <Link href="/About">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
                   Sobre
-                </li>
-              </Link>
-              <Link href="/Projects">
-                <li onClick={() => setNav(false)} className="py-4 text-sm">
-                  Projetos
                 </li>
               </Link>
               <Link href="/Contact">
