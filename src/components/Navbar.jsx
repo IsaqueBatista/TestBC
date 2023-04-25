@@ -28,7 +28,7 @@ export default function Navbar() {
       router.asPath === "/loginNext" ||
       router.asPath === "/travel" ||
       router.asPath === "/hamburgueria" ||
-      router.asPath === "/ProgramaA"
+      router.asPath === "/converter"
     ) {
       setNavBg("transparent");
       setLinkColor("#ecf0f3");

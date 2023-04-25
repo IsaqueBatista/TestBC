@@ -1,10 +1,10 @@
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import ProgramaaA from "../../public/assets/projects/programaA.png";
-
+import Image from "next/image";
+import Link from "next/link";
 import { RiRadioButtonFill } from "react-icons/ri";
 import { BsArrowLeft } from "react-icons/bs";
-import Link from "next/link";
+
+import ProgramaaA from "../../public/assets/projects/programaA.png";
 import { fetchUserData } from "../components/Api";
 
 export default function ProgramaA() {
@@ -15,6 +15,7 @@ export default function ProgramaA() {
     };
     loadData();
   }, []);
+  
   return (
     <div className="w-full">
       <div className="w-screen h-[50vh] relative">
@@ -38,7 +39,7 @@ export default function ProgramaA() {
           {programs.description}
           </p>
           <a
-            href="https://github.com/IsaqueBatista/amakha-paris"
+            href="https://github.com/IsaqueBatista/TestBC"
             target="_blank"
             rel="noreferrer"
           >
@@ -54,23 +55,11 @@ export default function ProgramaA() {
         </div>
         <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl py-4">
           <div className="p-2">
-            <p className="text-center font-bold pb-2">Tecnologias</p>
+            <p className="text-center font-bold pb-2">Procuramos</p>
 
             <div className="grid grid-cols-2 md:grid-cols-1">
               <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> Next.JS
-              </p>
-
-              <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> Tailwind CSS
-              </p>
-
-              <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> Javascript
-              </p>
-
-              <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> React-icons
+                <RiRadioButtonFill className="pr-1" /> Voluntários
               </p>
             </div>
           </div>
