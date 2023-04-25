@@ -1,11 +1,24 @@
-import React from "react";
+// import React from "react";
+import React, { useEffect, useState } from "react";
+
 import loginNextImg from "../../public/assets/projects/loginNext.png";
 import hamburgueriaImg from "../../public/assets/projects/hamburgueria.png";
 import travelImg from "../../public/assets/projects/travel.png";
-import amakhaParis from "../../public/assets/projects/amakhaparis.png";
+import ProgramaA from "../../public/assets/projects/programaA.png";
 import ProjectItem from "@/components/ProjectItem";
 
+import { fetchUserData } from "../components/Api";
+
 export default function AcoesSociais() {
+
+  const [programs, setPrograms] = useState([]);
+  useEffect(() => {
+    const loadData = async () => {
+      setPrograms(await fetchUserData());
+    };
+    loadData();
+  }, []);
+  
   return (
     <div className="w-full md:h-screen p-2 flex items-center py-16">
       <div className="max-w-[1240px] m-auto px-2 py-16">
@@ -13,27 +26,27 @@ export default function AcoesSociais() {
         <div className="grid md:grid-cols-2 gap-8">
           <ProjectItem
             tittle="Projeto A"
-            backgroundImg={amakhaParis}
+            backgroundImg={ProgramaA}
             technologies="Ação Social - Programa A"
-            projectUrl="/amakhaParis"
+            projectUrl="/ProgramaA"
           />
           <ProjectItem
             tittle="Programa B"
             backgroundImg={loginNextImg}
             technologies="Ação Social - Programa B"
-            projectUrl="/loginNext"
+            projectUrl="/ProgramaB"
           />
           <ProjectItem
             tittle="Programa C"
             backgroundImg={travelImg}
             technologies="Ação Social - Programa C"
-            projectUrl="/travel"
+            projectUrl="/ProgramaC"
           />
           <ProjectItem
             tittle="Programa D"
             backgroundImg={hamburgueriaImg}
             technologies="Ação Social - Programa D"
-            projectUrl="/hamburgueria"
+            projectUrl="/ProgramaD"
           />
         </div>
       </div>

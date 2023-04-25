@@ -1,11 +1,20 @@
 import Image from "next/image";
-import React from "react";
-import amakhaImg from "../../public/assets/projects/amakhaparis.png";
+import React, { useEffect, useState } from "react";
+import ProgramaaA from "../../public/assets/projects/programaA.png";
+
 import { RiRadioButtonFill } from "react-icons/ri";
 import { BsArrowLeft } from "react-icons/bs";
 import Link from "next/link";
+import { fetchUserData } from "../components/Api";
 
-export default function amakhaParis() {
+export default function ProgramaA() {
+  const [programs, setPrograms] = useState([]);
+  useEffect(() => {
+    const loadData = async () => {
+      setPrograms(await fetchUserData());
+    };
+    loadData();
+  }, []);
   return (
     <div className="w-full">
       <div className="w-screen h-[50vh] relative">
@@ -14,21 +23,19 @@ export default function amakhaParis() {
           className="absolute z-1"
           layout="fill"
           objectFit="cover"
-          src={amakhaImg}
+          src={ProgramaaA}
           alt="/"
         />
         <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2">
-          <h2 className="py-2">Amakha Paris Site</h2>
-          <h3>Next.JS / Tailwind / Javascript</h3>
+          <h2 className="py-2">{programs.name}</h2>
         </div>
       </div>
 
       <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8">
         <div className="col-span-4">
-          <h2 className="pb-5">Sobre o projeto</h2>
+          <h2 className="pb-5">Sobre o programa</h2>
           <p>
-            Projeto criado com foco de aumentar a captação de consumidores e(ou) revendedores para Amakha Paris, que é uma das maiores marcas de perfumaria e cosméticos brasileira. 
-            O sistema que esse projeto irá rodar já foi testado, e com a qualidade desse projeto estimo aumentar em mais de 10x os resultados atuais.
+          {programs.description}
           </p>
           <a
             href="https://github.com/IsaqueBatista/amakha-paris"
@@ -38,7 +45,7 @@ export default function amakhaParis() {
             <button className="px-8 py-2 mt-4 mr-8">Repositório</button>
           </a>
           <a
-            href="https://amakhaparis.vercel.app/"
+            href="https://brasilcursinhos.org/"
             target="_blank"
             rel="noreferrer"
           >
@@ -68,7 +75,7 @@ export default function amakhaParis() {
             </div>
           </div>
         </div>
-        <Link href="/Projects">
+        <Link href="/AcoesSociais">
           <button className="px-8 py-2 mt-4 mr-8 flex items-center">
             <BsArrowLeft className="pr-1" /> Voltar
           </button>
