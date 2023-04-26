@@ -90,7 +90,7 @@ export default function Navbar() {
             </Link>
             <Link href="/About">
               <li className="ml-4 mr-4 text-sm uppercase hover:border-b">
-                Sobre
+                Sobre nós
               </li>
             </Link>
             <Link href="/Contact">
@@ -136,7 +136,7 @@ export default function Navbar() {
               </div>
             </div>
             <div className="border-b border-gray-300 my-4">
-            <h2 className="py-4 flex justify-center text-[#7D8635]">
+              <h2 className="py-4 flex justify-center text-[#7D8635]">
                 {programs.name}
               </h2>
             </div>
@@ -155,7 +155,7 @@ export default function Navbar() {
               </Link>
               <Link href="/About">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
-                  Sobre
+                  Sobre nós
                 </li>
               </Link>
               <Link href="/Contact">
@@ -209,7 +209,8 @@ export default function Navbar() {
                 </a>
 
                 <Link href="/Contact">
-                  <div onClick={() => setNav(false)}
+                  <div
+                    onClick={() => setNav(false)}
                     className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer 
                 hover:scale-105 ease-in duration-300"
                   >

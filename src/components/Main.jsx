@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { fetchUserData } from "../components/Api";
+import Footer from "../components/Footer";
 
 const Main = () => {
   const [programs, setPrograms] = useState([]);
@@ -23,6 +24,7 @@ const Main = () => {
           </p>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };
