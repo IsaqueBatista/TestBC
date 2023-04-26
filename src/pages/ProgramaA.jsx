@@ -4,7 +4,7 @@ import Link from "next/link";
 import { RiRadioButtonFill } from "react-icons/ri";
 import { BsArrowLeft } from "react-icons/bs";
 
-import ProgramaaA from "../../public/assets/projects/programaA.png";
+import ProgramaaA from "../../public/assets/projects/ProgramaA.png";
 import { fetchUserData } from "../components/Api";
 
 export default function ProgramaA() {
