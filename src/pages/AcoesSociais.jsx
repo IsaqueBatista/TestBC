@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 
-import ProgramaaB from "../../public/assets/projects/ProgramaB.png";
-import ProgramaaD from "../../public/assets/projects/ProgramaD.png";
+import ProgramaaA from "../../public/assets/projects/ProgramaA.png";
+import ProgramaaB from "../../public/assets/projects/ProgramaB.png"
 import ProgramaaC from "../../public/assets/projects/ProgramaC.png";
-import ProgramaaA from "../../public/assets/projects/programaA.png";
+import ProgramaaD from "../../public/assets/projects/ProgramaD.png";
 import ProjectItem from "../components/ProjectItem";
 
 // import { fetchUserData } from "../components/Api";
