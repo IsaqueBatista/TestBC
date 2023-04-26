@@ -4,7 +4,7 @@ import ProgramaaB from "../../public/assets/projects/ProgramaB.png";
 import ProgramaaD from "../../public/assets/projects/ProgramaD.png";
 import ProgramaaC from "../../public/assets/projects/ProgramaC.png";
 import ProgramaaA from "../../public/assets/projects/programaA.png";
-import ProjectItem from "@/components/ProjectItem";
+import ProjectItem from "../components/ProjectItem";
 
 // import { fetchUserData } from "../components/Api";
 
