@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import ProgramaaA from "../../public/assets/projects/ProgramaA.png";
-import ProgramaaB from "../../public/assets/projects/ProgramaB.png"
+import ProgramaaB from "../../public/assets/projects/ProgramaB.png";
 import ProgramaaC from "../../public/assets/projects/ProgramaC.png";
 import ProgramaaD from "../../public/assets/projects/ProgramaD.png";
 import ProjectItem from "../components/ProjectItem";
@@ -52,7 +52,9 @@ export default function AcoesSociais() {
           </div>
         </div>
       </div>
-      <Footer />
+      <div className="mt-60">
+        <Footer />
+      </div>
     </>
   );
 }

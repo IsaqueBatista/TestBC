@@ -4,9 +4,7 @@ import Link from "next/link";
 import Footer from "../components/Footer";
 import AboutImg from "../../public/assets/about.jpg";
 
-
 export default function About() {
-
   return (
     <>
       <div className="w-full md:h-screen p-2 flex items-center py-16">
@@ -41,7 +39,9 @@ export default function About() {
           </div>
         </div>
       </div>
-      <Footer />
+      <div>
+        <Footer />
+      </div>
     </>
   );
 }
